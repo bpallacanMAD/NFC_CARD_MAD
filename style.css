@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,173 +7,90 @@
 
 body {
     min-height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 20px;
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    background:
-        radial-gradient(
-            circle at top,
-            #303030 0%,
-            #111111 45%,
-            #000000 100%
-        );
-
+    font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(circle at top, #303030, #080808 75%);
     color: white;
 }
-
 
 .card {
     width: 100%;
     max-width: 430px;
-
-    padding: 40px 25px;
-
+    padding: 35px 25px;
     text-align: center;
 }
 
-
-.profile {
-    margin-bottom: 35px;
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 18px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #111;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -2px;
 }
 
-
-.profile-image {
-    width: 115px;
-    height: 115px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    margin-bottom: 20px;
-
-    border: 3px solid rgba(255,255,255,0.15);
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,0.5);
+.company {
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
 }
-
 
 h1 {
-    font-size: 30px;
-    font-weight: 700;
-
+    font-size: 29px;
     margin-bottom: 8px;
 }
 
-
 .job {
-    font-size: 17px;
-
-    color: #d0d0d0;
-
-    margin-bottom: 5px;
+    color: #aaa;
+    margin-bottom: 32px;
 }
-
-
-.company {
-    font-size: 15px;
-
-    color: #888;
-}
-
 
 .actions {
     display: flex;
-
     flex-direction: column;
-
     gap: 12px;
 }
 
-
-.button,
-.main-button {
-
+.button, .main-button {
+    display: block;
     width: 100%;
-
-    padding: 17px 20px;
-
-    border-radius: 16px;
-
+    padding: 17px 12px;
+    border-radius: 15px;
     text-decoration: none;
-
-    font-size: 16px;
-
+    font-size: 15px;
     font-weight: 600;
-
-    transition:
-        transform 0.15s ease,
-        background 0.15s ease;
-
+    transition: transform .2s;
 }
 
+.main-button {
+    background: white;
+    color: #111;
+}
 
 .button {
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.1);
     color: white;
-
-    background: rgba(255,255,255,0.10);
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(10px);
 }
 
-
-.main-button {
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-
-    color: #000;
-
-    background: white;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.35);
-
+.button:active, .main-button:active {
+    transform: scale(.97);
 }
-
-
-.main-button span {
-    font-size: 22px;
-}
-
-
-.button:hover,
-.main-button:hover {
-    transform: translateY(-2px);
-}
-
-
-.button:active,
-.main-button:active {
-    transform: scale(0.98);
-}
-
 
 .nfc {
-
     margin-top: 30px;
-
+    color: #777;
     font-size: 12px;
-
-    color: #666;
 }
