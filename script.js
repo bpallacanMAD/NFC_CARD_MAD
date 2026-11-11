@@ -114,9 +114,6 @@ if (!contacto) {
     document.getElementById("employee-area").textContent =
         contacto.area;
 
-    document.getElementById("employee-description").textContent =
-        contacto.descripcion || descripcionBase;
-
     document.getElementById("employee-email").textContent =
         contacto.correo;
 
