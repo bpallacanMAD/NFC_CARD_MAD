@@ -60,6 +60,15 @@ const contactos = {
         correo: "hborquez@madchile.cl",
         ubicacion: "Quillota, Chile",
         foto: "assets/hector.jpeg"
+    },
+
+        nmunoz: {
+        nombre: "Nicolás Muñoz",
+        cargo: "Ingeniero de proyectos",
+        telefono: "+56996155102",
+        correo: "nmunoz@madchile.cl",
+        ubicacion: "Quillota, Chile",
+        foto: "assets/nmunoz.jpg"
     }
 };
 
