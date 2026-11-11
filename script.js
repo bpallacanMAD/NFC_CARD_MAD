@@ -68,7 +68,7 @@ const contactos = {
         telefono: "+56996155102",
         correo: "nmunoz@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/nmunoz.jpg"
+        foto: "assets/nmunoz.JPG"
     }
 };
 
