@@ -363,6 +363,11 @@ body {
         left: 20px;
     }
 
+    .company-logo img,
+    .footer img {
+    filter: brightness(0) invert(1);
+    }
+
     .company-logo img {
         width: 110px;
     }
