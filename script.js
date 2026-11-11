@@ -1,8 +1,7 @@
 const contactos = {
     alvaro: {
         nombre: "Álvaro Ramírez",
-        cargo: "Cargo del trabajador",
-        area: "Área correspondiente",
+        cargo: "Representante legal",
         telefono: "+56991263306",
         correo: "aramirez@madchile.cl",
         ubicacion: "Quillota, Chile",
@@ -11,8 +10,7 @@ const contactos = {
 
     roberto: {
         nombre: "Roberto Sánchez",
-        cargo: "Cargo del trabajador",
-        area: "Área correspondiente",
+        cargo: "Subgerente de ingeniería y desarrollo",
         telefono: "+56940756036",
         correo: "rsanchez@madchile.cl",
         ubicacion: "Quillota, Chile",
@@ -21,8 +19,7 @@ const contactos = {
 
     diego: {
         nombre: "Diego Ramírez",
-        cargo: "Cargo del trabajador",
-        area: "Área correspondiente",
+        cargo: "Gerente de ingeniería y operaciones",
         telefono: "+56969199425",
         correo: "dramirez@madchile.cl",
         ubicacion: "Quillota, Chile",
@@ -31,8 +28,7 @@ const contactos = {
 
     nicolas: {
         nombre: "Nicolás Carmona",
-        cargo: "Cargo del trabajador",
-        area: "Área correspondiente",
+        cargo: "Ingeniero de investigacion",
         telefono: "+56978091887",
         correo: "ncarmona@madchile.cl",
         ubicacion: "Quillota, Chile",
@@ -41,8 +37,7 @@ const contactos = {
 
     carlos: {
         nombre: "Carlos Bernal",
-        cargo: "Cargo del trabajador",
-        area: "Área correspondiente",
+        cargo: "Ingeniero de servicios",
         telefono: "+56998146061",
         correo: "cbernal@madchile.cl",
         ubicacion: "Quillota, Chile",
@@ -51,8 +46,7 @@ const contactos = {
 
     americo: {
         nombre: "Américo Leal",
-        cargo: "Cargo del trabajador",
-        area: "Área correspondiente",
+        cargo: "Ingeniero de proyectos",
         telefono: "+56986720254",
         correo: "aleal@madchile.cl",
         ubicacion: "Quillota, Chile",
@@ -61,23 +55,13 @@ const contactos = {
 
     hector: {
         nombre: "Héctor Borquez",
-        cargo: "Cargo del trabajador",
-        area: "Área correspondiente",
+        cargo: "Ingeniero de proyectos",
         telefono: "+56968715083",
         correo: "hborquez@madchile.cl",
         ubicacion: "Quillota, Chile",
         foto: "assets/hector.jpg"
-    },
-
-    bastian: {
-        nombre: "Bastián Pallacán",
-        cargo: "Ingeniero Informático",
-        area: "Área correspondiente",
-        telefono: "+569XXXXXXXX",
-        correo: "correo@ejemplo.cl",
-        ubicacion: "Quillota, Chile",
-        foto: "assets/bastian.jpg"
     }
+    
 };
 
 const empresa = "MAD S.A.";
