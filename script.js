@@ -5,7 +5,7 @@ const contactos = {
         telefono: "+56991263306",
         correo: "aramirez@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/alvaro.jpg"
+        foto: "assets/alvaro.jpeg"
     },
 
     roberto: {
@@ -14,7 +14,7 @@ const contactos = {
         telefono: "+56940756036",
         correo: "rsanchez@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/roberto.jpg"
+        foto: "assets/roberto.jpeg"
     },
 
     diego: {
@@ -28,11 +28,11 @@ const contactos = {
 
     nicolas: {
         nombre: "Nicolás Carmona",
-        cargo: "Ingeniero de investigacion",
+        cargo: "Ingeniero de investigación",
         telefono: "+56978091887",
         correo: "ncarmona@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/nicolas.jpg"
+        foto: "assets/nicolas.jpeg"
     },
 
     carlos: {
@@ -41,7 +41,7 @@ const contactos = {
         telefono: "+56998146061",
         correo: "cbernal@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/carlos.jpg"
+        foto: "assets/carlos.jpeg"
     },
 
     americo: {
@@ -50,7 +50,7 @@ const contactos = {
         telefono: "+56986720254",
         correo: "aleal@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/americo.jpg"
+        foto: "assets/americo.JPG"
     },
 
     hector: {
@@ -59,14 +59,12 @@ const contactos = {
         telefono: "+56968715083",
         correo: "hborquez@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/hector.jpg"
+        foto: "assets/hector.jpeg"
     }
-    
 };
 
 const empresa = "MAD S.A.";
 const web = "https://www.madchile.cl/";
-const direccion = "https://maps.app.goo.gl/iKqvHbX65T27GB5F7";
 
 // Identificar contacto desde la URL
 const parametros = new URLSearchParams(window.location.search);
@@ -95,8 +93,14 @@ if (!contacto) {
     document.getElementById("employee-position").textContent =
         contacto.cargo;
 
-    document.getElementById("employee-area").textContent =
-        contacto.area;
+    // Área: se oculta si el trabajador no tiene
+    const area = document.getElementById("employee-area");
+
+    if (contacto.area) {
+        area.textContent = contacto.area;
+    } else {
+        area.style.display = "none";
+    }
 
     document.getElementById("employee-email").textContent =
         contacto.correo;
@@ -113,6 +117,7 @@ if (!contacto) {
     foto.src = contacto.foto;
 
     foto.onerror = function() {
+        this.onerror = null;
         this.src = "assets/default-profile.png";
     };
 
