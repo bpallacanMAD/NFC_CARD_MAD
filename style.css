@@ -3,6 +3,10 @@
     --green: #15803d;
     --green-light: #22c55e;
     --green-soft: #dcfce7;
+    --hero-start: #064e3b;
+    --hero-end: #087c49;
+    --hero-subtitle: #d1fae5;
+    --hero-area: #bbf7d0;
     --text: #17212b;
     --muted: #64748b;
     --white: #ffffff;
@@ -35,7 +39,7 @@ body {
 .hero {
     position: relative;
     padding: 45px 35px 55px;
-    background: linear-gradient(125deg, #064e3b, #087c49);
+    background: linear-gradient(125deg, var(--hero-start), var(--hero-end));
     color: white;
     text-align: center;
     overflow: hidden;
@@ -117,7 +121,7 @@ body {
 .profile h2 {
     font-size: 23px;
     font-weight: 500;
-    color: #d1fae5;
+    color: var(--hero-subtitle);
 }
 
 .company-name {
@@ -128,7 +132,7 @@ body {
 
 .employee-area {
     margin-top: 6px;
-    color: #bbf7d0;
+    color: var(--hero-area);
 }
 
 /* BOTONES */
@@ -187,8 +191,9 @@ body {
 
 .information-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .info-card {
@@ -213,13 +218,6 @@ body {
 .heading-icon {
     font-size: 32px;
     color: var(--green);
-}
-
-.description {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #334155;
-    white-space: pre-line;
 }
 
 /* CONTACTO */
@@ -389,10 +387,6 @@ body {
 
     .content {
         padding: 25px 15px;
-    }
-
-    .information-grid {
-        grid-template-columns: 1fr;
     }
 
     .info-card {
