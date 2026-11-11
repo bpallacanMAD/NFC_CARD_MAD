@@ -1,3 +1,4 @@
+const descripcionBase = "Parte del equipo de MAD S.A., ingeniería y manufactura para la minería y la industria.";
 
 const contactos = {
     alvaro: {
@@ -7,10 +8,7 @@ const contactos = {
         telefono: "+56991263306",
         correo: "aramirez@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/alvaro.jpg",
-        descripcion: "Trabajador de MAD S.A. comprometido con el trabajo en equipo y el desarrollo de soluciones para nuestros clientes.",
-        etiquetas: ["Trabajo en equipo", "Compromiso", "MAD S.A."],
-        experiencia: ""
+        foto: "assets/alvaro.jpg"
     },
 
     roberto: {
@@ -20,10 +18,7 @@ const contactos = {
         telefono: "+56940756036",
         correo: "rsanchez@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/roberto.jpg",
-        descripcion: "Trabajador de MAD S.A. comprometido con el trabajo en equipo y el desarrollo de soluciones para nuestros clientes.",
-        etiquetas: ["Trabajo en equipo", "Compromiso", "MAD S.A."],
-        experiencia: ""
+        foto: "assets/roberto.jpg"
     },
 
     diego: {
@@ -33,10 +28,7 @@ const contactos = {
         telefono: "+56969199425",
         correo: "dramirez@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/diego.jpg",
-        descripcion: "Trabajador de MAD S.A. comprometido con el trabajo en equipo y el desarrollo de soluciones para nuestros clientes.",
-        etiquetas: ["Trabajo en equipo", "Compromiso", "MAD S.A."],
-        experiencia: ""
+        foto: "assets/diego.jpg"
     },
 
     nicolas: {
@@ -46,10 +38,7 @@ const contactos = {
         telefono: "+56978091887",
         correo: "ncarmona@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/nicolas.jpg",
-        descripcion: "Trabajador de MAD S.A. comprometido con el trabajo en equipo y el desarrollo de soluciones para nuestros clientes.",
-        etiquetas: ["Trabajo en equipo", "Compromiso", "MAD S.A."],
-        experiencia: ""
+        foto: "assets/nicolas.jpg"
     },
 
     carlos: {
@@ -59,10 +48,7 @@ const contactos = {
         telefono: "+56998146061",
         correo: "cbernal@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/carlos.jpg",
-        descripcion: "Trabajador de MAD S.A. comprometido con el trabajo en equipo y el desarrollo de soluciones para nuestros clientes.",
-        etiquetas: ["Trabajo en equipo", "Compromiso", "MAD S.A."],
-        experiencia: ""
+        foto: "assets/carlos.jpg"
     },
 
     americo: {
@@ -72,10 +58,7 @@ const contactos = {
         telefono: "+56986720254",
         correo: "aleal@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/americo.jpg",
-        descripcion: "Trabajador de MAD S.A. comprometido con el trabajo en equipo y el desarrollo de soluciones para nuestros clientes.",
-        etiquetas: ["Trabajo en equipo", "Compromiso", "MAD S.A."],
-        experiencia: ""
+        foto: "assets/americo.jpg"
     },
 
     hector: {
@@ -85,10 +68,17 @@ const contactos = {
         telefono: "+56968715083",
         correo: "hborquez@madchile.cl",
         ubicacion: "Quillota, Chile",
-        foto: "assets/hector.jpg",
-        descripcion: "Trabajador de MAD S.A. comprometido con el trabajo en equipo y el desarrollo de soluciones para nuestros clientes.",
-        etiquetas: ["Trabajo en equipo", "Compromiso", "MAD S.A."],
-        experiencia: ""
+        foto: "assets/hector.jpg"
+    },
+
+    bastian: {
+        nombre: "Bastián Pallacán",
+        cargo: "Ingeniero Informático",
+        area: "Área correspondiente",
+        telefono: "+569XXXXXXXX",
+        correo: "correo@ejemplo.cl",
+        ubicacion: "Quillota, Chile",
+        foto: "assets/bastian.jpg"
     }
 };
 
@@ -127,7 +117,7 @@ if (!contacto) {
         contacto.area;
 
     document.getElementById("employee-description").textContent =
-        contacto.descripcion;
+        contacto.descripcion || descripcionBase;
 
     document.getElementById("employee-email").textContent =
         contacto.correo;
@@ -147,28 +137,6 @@ if (!contacto) {
         this.src = "assets/default-profile.png";
     };
 
-    // Experiencia
-    const experiencia = document.getElementById("employee-years");
-
-    if (contacto.experiencia) {
-        experiencia.textContent = contacto.experiencia;
-    } else {
-        experiencia.closest(".value-item").style.display = "none";
-    }
-
-    // Etiquetas
-    const contenedorEtiquetas =
-        document.getElementById("employee-tags");
-
-    contacto.etiquetas.forEach(etiqueta => {
-        const elemento = document.createElement("span");
-
-        elemento.className = "tag";
-        elemento.textContent = etiqueta;
-
-        contenedorEtiquetas.appendChild(elemento);
-    });
-
     // Enlaces de contacto
     document.getElementById("email-button").href =
         `mailto:${contacto.correo}`;
@@ -179,18 +147,12 @@ if (!contacto) {
     document.getElementById("whatsapp-button").href =
         `https://wa.me/${contacto.telefono.replace(/\D/g, "")}`;
 
-    // Enlace web y ubicación
-    // Se pueden utilizar desde los botones correspondientes.
-    const website = document.getElementById("website");
-    if (website) website.href = web;
-
-    const map = document.getElementById("map");
-    if (map) map.href = direccion;
-
     // LinkedIn: ocultar si no hay enlace
     const linkedin = document.getElementById("linkedin-button");
 
-    if (linkedin) {
+    if (contacto.linkedin) {
+        linkedin.href = contacto.linkedin;
+    } else {
         linkedin.style.display = "none";
     }
 
@@ -217,7 +179,6 @@ if (!contacto) {
             `TEL;TYPE=CELL:${escapar(contacto.telefono)}`,
             `EMAIL;TYPE=WORK:${escapar(contacto.correo)}`,
             `URL:${web}`,
-            `ADR;TYPE=WORK:;;;;;;`,
             "END:VCARD"
         ].join("\r\n");
 
