@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Bastián;Pallacán;;;
+FN:Bastián Pallacán
+ORG:MAD S.A.
+TITLE:Ingeniero Informático
+TEL;TYPE=CELL:+569XXXXXXXX
+EMAIL:correo@ejemplo.cl
+URL:https://www.linkedin.com/
+END:VCARD
