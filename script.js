@@ -1,5 +1,3 @@
-const descripcionBase = "Parte del equipo de MAD S.A., ingeniería y manufactura para la minería y la industria.";
-
 const contactos = {
     alvaro: {
         nombre: "Álvaro Ramírez",
